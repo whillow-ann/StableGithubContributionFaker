@@ -18,8 +18,9 @@ public class mainFunction {
         try {
             shittyCodeGenerator.shittyCodeGenerator("rbq.java",number);
          } catch (IOException e) {
-            System.out.println("shittyCodeGenerator error");dddddd
+            System.out.println("shittyCodeGenerator error");
          }
+         System.out.println("running");
 
     }
     
