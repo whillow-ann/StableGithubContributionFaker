@@ -1,12 +1,14 @@
 name: run-java
 
 on:
-  workflow_dispatch   # 手动触发（最简单）
+  workflow_dispatch
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
 
 jobs:
   run:
     permissions:
-      contents: write   # 允许写回仓库
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
