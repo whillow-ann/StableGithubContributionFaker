@@ -1,3 +1,4 @@
+**current main branch isn't stable.**
 # StableGithubContributionFaker
 
 The sole purpose of this project is to fake github contribution, making you look like a contributing coder.
@@ -12,3 +13,7 @@ This is probabily very vibe-coded.
 Edit：
 Currently if you go to action and run, it will update the main branch.
 Working on it running automaticlly everyday.
+Edit:
+Sadly github only allow auto scheduel yml in Main branch.
+Unstable branch don't work.
+Thus the current main branch isn't stable.
