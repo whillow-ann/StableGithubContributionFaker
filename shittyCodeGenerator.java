@@ -27,7 +27,9 @@ public class shittyCodeGenerator {
             line = line + randomWords2[(int)(Math.random() * randomWords2.length)];
             line = line + randomWords3[(int)(Math.random() * randomWords3.length)];
             line = line + randomWords4[(int)(Math.random() * randomWords4.length)];
-            fw.write("      System.out.println(\"" + line + "\");\n");
+            String thisLine = "      System.out.println(\"" + line + "\");\n";
+            fw.write(thisLine);
+            System.out.println(thisLine);
         }
 
         fw.write("  }\n}");
