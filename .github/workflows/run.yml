@@ -5,11 +5,15 @@ on:
 
 jobs:
   run:
+    permissions:
+      contents: write   # 允许写回仓库
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup JDK
         uses: actions/setup-java@v5
@@ -17,7 +21,16 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: 编译并运行
+      - name: Javac and run
         run: |
           javac mainFunction.java
           java mainFunction
+          
+      - name: Commit generated file
+        run: |
+          git config --local user.email "165192062+whillow-ann@users.noreply.github.com"
+          git config --local user.name "whillow-ann"
+          git add .
+          git commit -m "Auto contribution 1" || echo "no changes"
+      - name: Push back to main
+        run: git push
