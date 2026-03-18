@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class shittyFileGenerator {
-    public static void main(String[] args) throws IOException {
+    public static File run() throws IOException {
         File file = new File("rbq.java");
 
         if (file.createNewFile()) {
@@ -10,5 +10,6 @@ public class shittyFileGenerator {
         } else {
             System.out.println("File already exists");
         }
+        return file;
     }
 }
